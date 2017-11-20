@@ -2,14 +2,15 @@ console.log('AES_import_export_key.js');
 console.log('');
 
 let cryptoInstance3 = new cryptoAPI('AES');
-let someData = 'hello importer!';
+let someData1 = 'hello importer!';
+console.log('your input data: ', someData1);
 
 //generate the secret key
 cryptoInstance3.generateKey()
 .then(function(secretKey){
 
     //encrypt some data
-    cryptoInstance3.encrypt(stringToArrayBuffer(someData))
+    cryptoInstance3.encrypt(stringToArrayBuffer(someData1))
     .then(function(cipherObject){
         
         console.log('cipher gotten using cryptoInstance3');
@@ -35,7 +36,8 @@ cryptoInstance3.generateKey()
             
                 .then(function(plainText){
                     
-                    console.log('the plain text acquired by using decryption on the new instance: ', arrayBufferToString(plainText))
+                    console.log('the plain text acquired by using decryption on the new instance: ',
+                                arrayBufferToString(plainText))
                 })
             })
     
