@@ -175,16 +175,12 @@ function cryptoAPI(algoUsed){
 
     }
 
-    function updateKey(key){
-        savedKey = key;
-    }
 
     let publicAPI = {
         generateKey: generateKey,
         exportKey: exportKey,
         importKey: importKey,
         encrypt: encrypt,
-        updateKey: updateKey,
         decrypt: decrypt,
     };
 
