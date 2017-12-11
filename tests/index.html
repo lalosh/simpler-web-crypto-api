@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        
+    <head>
+
         <!-- load the API code -->
         <script src="../cryptoAPI.js"></script>
         <script src="../digSigAPI.js"></script>
 
+        <script src="generateKeys_and_cert.js"></script>
+        
+        <script src="../common.js"></script>        
+        <script src="../asn1.js"></script>
+        <script src="../x509_schema.js"></script>
+        <script src="../x509_simpl.js"></script>
+        
         <!-- helper functions to deal with array buffers -->
         <script src="../arrayBufferHelper.js"></script>
+        
+    </head>
+    <body>
+        
 
 
         <h1>Open this page in your browser and open the dev console</h1>
-
+        <a id="cert-pem-download" download="certificate.pem">cert-pem-download</a>
+        
         <!-- tests -->
         <!-- a piece of advice: run only the script you want,don't run everything at the same time -->
        
